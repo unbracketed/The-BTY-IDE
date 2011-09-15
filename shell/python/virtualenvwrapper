@@ -1,0 +1,28 @@
+
+# vim: set ft=sh :
+
+# credits:
+# bitprophet
+
+#
+# Virtualenvwrapper
+#
+
+# Attempt to locate virtualenvwrapper on the system, with support
+# for older versions
+ROOTS="/usr/bin /usr/local/bin"
+SUFFIXES="_bashrc .sh"
+for root in $ROOTS; do
+    for suffix in $SUFFIXES; do
+        path=$root/virtualenvwrapper$suffix
+        if [[ -f $path ]]; then
+            virtualenvwrapper=$path
+        fi
+    done
+done
+
+#FIXME allow override of workon_home
+if [[ -n "$virtualenvwrapper" && -f $virtualenvwrapper ]]; then
+    export WORKON_HOME=$workon_home
+    source $virtualenvwrapper
+fi
