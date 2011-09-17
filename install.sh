@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+#credits:
+# sontek
+# yml
+
 function link_file {
     source="${PWD}/$1"
     target="${HOME}/${1/_/.}"
@@ -28,3 +33,6 @@ git submodule update
 git submodule foreach git pull origin master
 git submodule foreach git submodule init
 git submodule foreach git submodule update
+
+
+
