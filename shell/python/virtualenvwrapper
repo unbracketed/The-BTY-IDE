@@ -10,7 +10,7 @@
 
 # Attempt to locate virtualenvwrapper on the system, with support
 # for older versions
-ROOTS="/usr/bin /usr/local/bin"
+ROOTS="/usr/bin /usr/local/bin /usr/local/share/python"
 SUFFIXES="_bashrc .sh"
 for root in $ROOTS; do
     for suffix in $SUFFIXES; do
