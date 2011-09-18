@@ -9,19 +9,37 @@
 
 # Attempt to locate virtualenvwrapper on the system, with support
 # for older versions
-ROOTS="/usr/bin /usr/local/bin /usr/local/share/python"
-SUFFIXES="_bashrc .sh"
-for root in $ROOTS; do
-    for suffix in $SUFFIXES; do
-        path=$root/virtualenvwrapper$suffix
-        if [[ -f $path ]]; then
-            virtualenvwrapper=$path
-        fi
-    done
-done
+#ROOTS="/usr/bin /usr/local/bin /usr/local/share/python"
+#SUFFIXES="_bashrc .sh"
+#for root in $ROOTS; do
+    #for suffix in $SUFFIXES; do
+        #path=$root/virtualenvwrapper$suffix
+        #if [[ -f $path ]]; then
+            #virtualenvwrapper=$path
+        #fi
+    #done
+#done
 
 #FIXME allow override of workon_home
-if [[ -n "$virtualenvwrapper" && -f $virtualenvwrapper ]]; then
-    export WORKON_HOME=$workon_home
-    source $virtualenvwrapper
-fi
+#if [[ -n "$virtualenvwrapper" && -f $virtualenvwrapper ]]; then
+    #export WORKON_HOME=$workon_home
+    #source $virtualenvwrapper
+#fi
+
+echo "+virtualenvwrapper"
+
+case $( uname -s ) in
+
+#OSX / Homebrew
+    Darwin ) 
+        export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
+        export WORKON_HOME=~/virtualenvs
+        . /usr/local/share/python/virtualenvwrapper.sh;; 
+# Ubuntu
+    Linux )
+        export WORKON_HOME=$HOME/.virtualenvs
+        export VIRTUALENVWRAPPER_LOG_DIR=/tmp
+        source /usr/local/bin/virtualenvwrapper.sh;; 
+esac
+
+echo "-virtualenvwrapper"
