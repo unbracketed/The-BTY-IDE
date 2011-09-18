@@ -1,0 +1,34 @@
+# Window Navigation
+
+# Next window  ^N n 
+unbind ^N
+bind ^N next-window
+unbind n
+bind n next-window
+
+# Previous window  ^P p 
+unbind ^P
+bind ^P previous-window
+unbind p
+bind p previous-window
+
+# ctrl+left/right cycles thru windows
+unbind-key C-Right
+bind-key -n C-Right next
+unbind-key C-Left
+bind-key -n C-Left prev
+
+# Panes 
+
+# Split window horizontally (new vertical pane) |
+unbind |
+bind | split-window -h
+# Split window vertically (new horizontal pane) -
+unbind -
+bind - split-window -v
+
+# vim-style movement between panes
+bind j select-pane -D
+bind k select-pane -U
+bind h select-pane -L
+bind l select-pane -R
