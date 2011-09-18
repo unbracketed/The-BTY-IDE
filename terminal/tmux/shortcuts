@@ -1,0 +1,10 @@
+#C-r to reload conf
+bind r source-file ~/.tmux.conf
+
+# Prompt for SSH host. Open in new window
+bind S command-prompt -p "ssh to:" "new-window -n %1 'ssh %1'"
+
+# Prompt for man page name. Open in new pane
+bind m command-prompt -p "man page:" "split-window -h 'exec man %%'"
+# Prompt for man page name. Open in new window
+bind M command-prompt -p "Man page:" "new-window -n 'man %1' 'exec man %1'"
