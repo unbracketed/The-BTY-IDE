@@ -1,3 +1,5 @@
+# vim: set ft=sh :
+ 
 #C-r to reload conf
 bind r source-file ~/.tmux.conf
 
