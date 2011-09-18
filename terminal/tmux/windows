@@ -1,12 +1,35 @@
+# vim: set ft=sh :
+#
+
+
+# Window Management
+
+
+# New window
+# screen compatible
+unbind ^C
+bind ^C new-window
+unbind c
+bind c new-window
+
+# Rename window
+# screen compatible
+unbind A
+bind A command-prompt "rename-window %%"
+
+
 # Window Navigation
 
+
 # Next window  ^N n 
+# screen compatible
 unbind ^N
 bind ^N next-window
 unbind n
 bind n next-window
 
 # Previous window  ^P p 
+# screen compatible
 unbind ^P
 bind ^P previous-window
 unbind p
@@ -18,7 +41,9 @@ bind-key -n C-Right next
 unbind-key C-Left
 bind-key -n C-Left prev
 
+
 # Panes 
+
 
 # Split window horizontally (new vertical pane) |
 unbind |
