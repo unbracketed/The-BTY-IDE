@@ -1,0 +1,11 @@
+# vim: set ft=sh :
+
+
+# Escape sequence compatibility with screen: ^A
+unbind C-b
+set -g prefix ^A
+bind a send-prefix
+
+# detach ^D d
+unbind ^D
+bind ^D detach
