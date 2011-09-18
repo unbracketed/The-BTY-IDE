@@ -1,0 +1,1 @@
+alias _zsh="echo 'reload zsh' && source ~/.zshrc"
