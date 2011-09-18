@@ -1,0 +1,10 @@
+Tips for creating themes:
+
+Use the shortcut to reload the tmux config C-r as you make changes. This way you can quickly verify 
+that each individual change has the desired result.
+
+
+To get a colorized list of tmux color codes run this in a shell:
+for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\n"
+done
