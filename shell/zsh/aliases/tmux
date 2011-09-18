@@ -1,0 +1,2 @@
+# List Sessions
+alias tmls='tmux list-sessions'
