@@ -1,2 +1,5 @@
 # List Sessions
 alias tmls='tmux list-sessions'
+
+# Rename session
+alias tmrs='tmux rename-session'
