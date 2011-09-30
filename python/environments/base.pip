@@ -1,0 +1,8 @@
+ipdb
+ipython
+nose
+coverage
+pyflakes
+pylint
+pep8
+redis
