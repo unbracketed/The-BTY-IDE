@@ -1,8 +1,8 @@
-ipdb
-ipython
-nose
-coverage
-pyflakes
-pylint
-pep8
-redis
+ipdb==0.6
+ipython==0.11
+nose==1.1.2
+coverage==3.5.1
+pyflakes==0.5.0
+pylint==0.24.0
+pep8==0.6.1
+redis==2.4.9
