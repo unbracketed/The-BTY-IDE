@@ -1,1 +1,2 @@
 alias mkenv='mkvirtualenv -r ~/code/BTY/python/environments/base.pip'
+alias mkenv_django='mkvirtualenv -r ~/code/BTY/python/environments/django.pip'

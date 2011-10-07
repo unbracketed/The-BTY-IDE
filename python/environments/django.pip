@@ -1,0 +1,9 @@
+-r base.pip
+
+django-debug-toolbar==0.8.5
+django-devserver==0.2.1
+django-extensions==0.6
+gunicorn==0.13.4
+Fabric==1.2.2
+
+-e git://github.com/jbalogh/django-debug-cache-panel#egg=cache_panel
