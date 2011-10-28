@@ -26,7 +26,10 @@
     #source $virtualenvwrapper
 #fi
 
+
 echo "+virtualenvwrapper"
+
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
 
 case $( uname -s ) in
 
