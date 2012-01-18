@@ -27,8 +27,6 @@
 #fi
 
 
-echo "+virtualenvwrapper"
-
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
 
 case $( uname -s ) in
@@ -44,5 +42,3 @@ case $( uname -s ) in
         export VIRTUALENVWRAPPER_LOG_DIR=/tmp
         source /usr/local/bin/virtualenvwrapper.sh;; 
 esac
-
-echo "-virtualenvwrapper"
