@@ -3,3 +3,18 @@ alias tmls='tmux list-sessions'
 
 # Rename session
 alias tmrs='tmux rename-session'
+
+new_vertical_pane_with_command() {
+    if (( ${+2} )); then
+        name=$2
+    else
+        name=$1
+    fi
+    echo $name
+    _NEW_WINDOW_INDEX=$(tmux new-window -P -d -n $name $1)
+    tmux join-pane -h -s $_NEW_WINDOW_INDEX 
+}
+
+alias tmpy='new_vertical_pane_with_command python'
+
+alias Djrs='new_vertical_pane_with_command "manage.py runserver" runserver'
