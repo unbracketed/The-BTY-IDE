@@ -27,7 +27,7 @@
 #fi
 
 
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
+#export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages --distribute'
 
 case $( uname -s ) in
 
