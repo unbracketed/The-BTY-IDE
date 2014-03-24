@@ -1,2 +1,14 @@
 alias mkenv='mkvirtualenv -r ~/code/BTY/python/environments/base.pip'
 alias mkenv_django='mkvirtualenv -r ~/code/BTY/python/environments/django.pip'
+
+function mkpydir {
+    mkdir $1
+    touch $1/__init__.py
+}
+
+alias piw='pip install --use-wheel --no-index --find-links=$WHEEL_DIR'
+
+alias djs='manage.py shell'
+alias djsp='manage.py shell_plus'
+alias djdb='manage.py dbshell'
+alias djrs='manage.py runserver'
